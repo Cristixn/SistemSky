@@ -1,0 +1,50 @@
+/* src/styles/SidebarItem.css */
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar-item.active {
+  background-color: rgba(52, 152, 219, 0.2);
+  color: white;
+}
+
+.has-submenu {
+  font-weight: 500;
+}
+
+.sidebar-icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-text {
+  margin-left: 12px;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.menu-arrow {
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.sidebar-item.active .menu-arrow {
+  transform: rotate(180deg);
+}

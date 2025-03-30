@@ -1,0 +1,73 @@
+/* src/styles/App.css */
+
+/* Sidebar Styles */
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  background-color: #2c3e50;
+  transition: width 0.3s ease;
+  color: white;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar.expanded {
+  width: 250px;
+}
+
+/* Iconos más grandes */
+.sidebar-icon {
+  font-size: 1.5rem !important; /* Sobreescribe Bootstrap */
+  min-width: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Items del menú */
+.nav-link {
+  padding: 12px 15px;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  margin: 4px 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: #3498db;
+  color: white !important;
+}
+
+/* Texto del menú */
+.menu-text {
+  margin-left: 12px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  margin-left: 80px; /* Igual al ancho del sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.expanded ~ .dashboard-container {
+  margin-left: 250px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar.expanded {
+    width: 200px;
+  }
+  .dashboard-container {
+    margin-left: 60px;
+  }
+  .sidebar.expanded ~ .dashboard-container {
+    margin-left: 200px;
+  }
+}
